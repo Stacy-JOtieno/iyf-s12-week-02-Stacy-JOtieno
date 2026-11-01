@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX MODEL PRACTICE</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F7F9FC;  
+        }
+        .box1 {
+            background-color: lawngreen;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+        }
+    .box2 {
+    background-color: white;
+            padding: 40px;
+            border: 3px dashed #13866D
+}
+.box3 {
+    background-color: white;
+            border: 5px solid #1A73E8;
+            padding: 30px;
+}
+.box4 {
+    background-color: white;
+            margin: 30px;
+            padding: 30px;
+            border: 5px solid black;
+  }
+  p {
+            margin: 0;
+        }
+
+        .box2 > p {
+            margin-bottom: 10px;
+        }
+
+        .box3 > p {
+            margin-bottom: 10px;
+        }
+
+        .box4 > p {
+            margin-bottom: 10px;
+        }
+  </style>
+</head>
+<body>
+    
+<section class="box-model-exercise">
+    <h2>CSS Box Model</h2>
+
+    <div class="box-container">
+        <div class="box4"><p>Margin</p>
+        <div class="box3"><p>Border</p>
+        <div class="box2"><p>Padding</p>
+            <div class="box1"><p>Content</p></div>
+        </div>
+        </div>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
