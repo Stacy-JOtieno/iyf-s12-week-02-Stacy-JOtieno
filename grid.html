@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+        background-color: floralwhite;
+     }   
+.gallery-section {
+    padding: 30px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== EXERCISE 2: MAGAZINE LAYOUT ===== */
+
+.magazine-layout {
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+
+    gap: 20px;
+    min-height: 500px;
+    padding: 20px;
+}
+
+/* Header spans both columns */
+.mag-header {
+    grid-area: header;
+    background-color: var(--color-primary);
+    color: blue;
+    padding: 20px;
+}
+
+/* Sidebar occupies the left column */
+.mag-sidebar {
+    grid-area: sidebar;
+    background-color: var(--color-secondary);
+    padding: 20px;
+}
+.mag-content {
+    grid-area: content;
+    background-color: var(--color-background);
+    padding: 20px;
+}
+.mag-footer {
+    grid-area: footer;
+    background-color: var(--color-text);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* ===== EXERCISE 3: PROJECT CARDS GRID ===== */
+
+.projects-section {
+    padding: 30px;
+    width: 100%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+.project-card {
+    width: 100%;
+    min-width: 0;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: var(--font-sm);
+    color: var(--color-muted);
+}
+
+
+/* ===== TABLET: 2 COLUMNS ===== */
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== MOBILE: 1 COLUMN ===== */
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+<section class="gallery-section">
+    <h2>My Photo Gallery</h2>
+
+    <div class="photo-gallery">
+        <img src="26.jpg" alt="Stacy in a graduation gown">
+        <img src="cute.jpeg" alt="Stacy with a cute face">
+        <img src="fashion.jpg" alt="Stacy in a creative attire">
+        <img src="me.jpg" alt="Stacy in a fluffy jacket">
+        <img src="sword.jpg" alt="Stacy with a sword">
+        <img src="tea.jpg" alt="Body is tea">
+    </div>
+   
+<div class="magazine-layout">
+
+    <header class="mag-header">
+        <h1>My Business Magazine</h1>
+    </header>
+
+    <aside class="mag-sidebar">
+        <h2>World</h2>
+        <p>Latest news</p>
+        <p>Business</p>
+        <p>Economy</p>
+    </aside>
+
+    <main class="mag-content">
+        <h2>Dangote IPO</h2>
+        <p>
+            The IPO—billed as "the people’s IPO"—raised about $4.78 billion to $4.8 billion in total orders, drawing nearly three to four times the original $1.6 billion base target.
+            Because demand significantly outstripped supply, Dangote is expected to utilize its 30% over-allotment option, expanding the final fundraising scale to approximately $2.1 billion.
+             The offering is currently going through verification and approval by the Securities and Exchange Commission (SEC). Allotments are expected to be credited to Central Securities Clearing System (CSCS) accounts, with secondary market trading on the Nigerian Exchange (NGX) anticipated in late November or early December 2026.
+        </p>
+    </main>
+</div> <!-- Close magazine-layout here -->
+
+
+
+    <footer class="mag-footer">
+        <p>Magazine Footer &copy; 2026</p>
+    </footer>
+
+</div>
+</section>
+<section class="projects-section">
+    <h2>My Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="https://placehold.co/400x250/1A73E8/FFFFFF?text=Web+Development" alt="Web development project">
+            <h3>Web Development</h3>
+            <p>Building websites with HTML, CSS and JavaScript.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="https://placehold.co/400x250/3DD5F3/0B1E39?text=Electronics" alt="Electronics project">
+            <h3>Electronics</h3>
+            <p>Exploring circuits and electronic systems.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="https://placehold.co/400x250/0B1E39/FFFFFF?text=Engineering" alt="Engineering project">
+            <h3>Engineering</h3>
+            <p>Working on engineering design and innovation.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="https://placehold.co/400x250/63A0F5/FFFFFF?text=Filmmaking" alt="Filmmaking project">
+            <h3>Filmmaking</h3>
+            <p>Creating stories through film and visual media.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="https://placehold.co/400x250/6B7280/FFFFFF?text=Programming" alt="Programming project">
+            <h3>Programming</h3>
+            <p>Learning to develop software and applications.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="https://placehold.co/400x250/E8F2FF/0B1E39?text=Innovation" alt="Innovation project">
+            <h3>Innovation</h3>
+            <p>Turning creative ideas into practical solutions.</p>
+        </div>
+
+    </div>
+</section> 
+</body>
+</html>

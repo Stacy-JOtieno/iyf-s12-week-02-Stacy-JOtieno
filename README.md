@@ -1,1 +1,0 @@
-# iyf-s12-week-02-Stacy-JOtieno
