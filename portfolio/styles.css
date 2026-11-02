@@ -512,3 +512,235 @@ button {
     color: var(--color-white);
     font-size: var(--font-sm);
 }
+
+/* ===== TASK 4.3: MOBILE-FIRST RESPONSIVE DESIGN ===== */
+
+/* Base styles: Mobile (320px and above) */
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+/* Navigation: Mobile */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Home page: Mobile */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Projects: Mobile - 1 column */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Contact: Mobile - full width */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-sidebar {
+    width: 100%;
+}
+/* ===== TABLET ===== */
+
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 750px;
+        padding: 25px;
+    }
+
+    /* Navigation */
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: auto;
+        gap: 25px;
+    }
+
+    /* Home page */
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+
+    .hero img {
+        width: 45%;
+        max-width: none;
+    }
+
+    /* Projects: 2 columns */
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .contact-form {
+        flex: 2;
+    }
+
+    .contact-sidebar {
+        flex: 1;
+    }
+}
+/* ===== DESKTOP ===== */
+
+@media (min-width: 1024px) {
+
+    .container {
+        max-width: 1000px;
+        padding: 30px;
+    }
+
+    /* Home hero */
+    .hero {
+        gap: 50px;
+    }
+
+    .hero img {
+        width: 50%;
+    }
+
+    /* Projects: 3 columns */
+    .projects-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+    }
+}
+/* ===== LARGE DESKTOP ===== */
+
+@media (min-width: 1280px) {
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .hero {
+        gap: 70px;
+    }
+
+    .projects-grid {
+        gap: 30px;
+    }
+}
+
+/* ===== MOBILE NAVIGATION ===== */
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Mobile menu */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+#menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
+/* ===== DESKTOP NAVIGATION ===== */
+
+@media (min-width: 768px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+        gap: 25px;
+    }
+
+    .navbar {
+        flex-wrap: nowrap;
+    }
+}
