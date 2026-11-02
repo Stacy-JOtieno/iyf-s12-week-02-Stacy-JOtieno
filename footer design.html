@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+    <style>
+        :root {
+            --color-text: #1e293b;
+            --color-secondary: #38bdf8;
+            --font-sm: 14px;
+        }
+
+        /* Main footer */
+        .main-footer {
+            background-color: var(--color-text);
+            color: white;
+            padding: 40px 20px 20px;
+        }
+
+        /* Footer layout */
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Footer headings */
+        .footer-column h3 {
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+        }
+
+        /* Footer paragraphs */
+        .footer-column p {
+            line-height: 1.7;
+        }
+
+        /* Footer links */
+        .footer-column a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        /* Hover effect */
+        .footer-column a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* Copyright section */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: var(--font-sm);
+        }
+
+        /* Tablet: 2 columns */
+        @media (min-width: 768px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop: 4 columns */
+        @media (min-width: 1024px) {
+            .footer-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+            <!-- Column 1: About Me -->
+            <div class="footer-column">
+                <h3>About Me</h3>
+                <p>Aspiring engineer, programmer and creative entrepreneur.</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <!-- Column 3: Contact -->
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>Email: jjaqkuxhi@gmail.com</p>
+            </div>
+
+            <!-- Column 4: Social Media -->
+            <div class="footer-column">
+                <h3>Follow Me</h3>
+                <a href="https://www.instagram.com/">Instagram 📸</a>
+                <a href="https://ke.linkedin.com/">LinkedIn 💼</a>
+                <a href="https://github.com/">GitHub 💻</a>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stacy Otieno. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
