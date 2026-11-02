@@ -1,0 +1,133 @@
+<
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Component</title>
+
+    <style>
+        :root {
+            --color-white: #ffffff;
+            --color-border: #dddddd;
+            --color-muted: #666666;
+            --color-primary: #2563eb;
+            --color-hover: #eaf1ff;
+            --font-sm: 14px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 320px;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 220px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: var(--color-muted);
+            margin-bottom: 15px;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: var(--color-hover);
+            color: var(--color-primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: var(--font-sm);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1749b1;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="card-image">
+            <img src="26.jpg" alt="Graduation celebration">
+        </div>
+
+        <div class="card-content">
+
+            <h3>GRADUATION FEAST</h3>
+
+            <p>
+                An invitation to my graduation feast
+                on 25th November 2026.
+            </p>
+
+            <div class="card-tags">
+                <span class="tag">Cake Cutting</span>
+                <span class="tag">Gifts</span>
+                <span class="tag">Feast</span>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+                Join the Celebration
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
