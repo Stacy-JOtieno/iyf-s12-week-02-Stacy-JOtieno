@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM STYLING</title>
+    <style>
+        
+
+/* ===== FORM POLISH ===== */
+
+body {
+    background-color: brown;
+    font-family: var(--font-body);
+    padding: 30px 20px;
+}
+
+/* Form heading */
+.form-heading {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--color-text);
+}
+
+/* Input hover */
+.styled-form input:hover,
+.styled-form textarea:hover {
+    border-color: var(--color-primary-light);
+}
+
+/* Placeholder styling */
+.styled-form input::placeholder,
+.styled-form textarea::placeholder {
+    color: #9CA3AF;
+}
+
+/* Submit button */
+.styled-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: var(--font-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.styled-form button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(26, 115, 232, 0.2);
+}
+
+/* Disabled or unavailable button */
+.styled-form button:active {
+    transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .styled-form {
+        gap: 10px;
+    }
+
+    .styled-form input,
+    .styled-form textarea {
+        font-size: 16px;
+    }
+}
+
+
+.styled-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.styled-form label {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.styled-form input,
+.styled-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    background-color: white;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.styled-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.styled-form input:focus,
+.styled-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+/* Error states */
+.styled-form input:invalid:not(:placeholder-shown),
+.styled-form textarea:invalid:not(:placeholder-shown) {
+    border-color: #DC2626;
+}
+
+.styled-form button {
+    align-self: flex-start;
+}
+    </style>
+</head>
+<body>
+ <h1 class="form-heading">Get In Touch</h1>
+<p class="form-heading">I'd love to hear from you!</p>
+<form class="styled-form">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name"
+           placeholder="Enter your name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email"
+           placeholder="Enter your email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message"
+              placeholder="Write your message..." required></textarea>
+
+    <button type="submit" class="btn btn-primary">
+        Send Message
+    </button>
+</form>
+   
+</body>
+</html>
